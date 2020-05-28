@@ -1,0 +1,10 @@
+steps:
+- name: 'docker.io/library/python:3.7'
+  entrypoint: /bin/sh
+  args: [-c, 'pip install -r requirements.txt', '&&', 'python', '-m', 'unittest', 'test_main.py']
+  dir: '/rental-housing-functions'
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'clscraper', '--http-trigger', '--runtime=python37', '--entry-point=handler',
+         '--memory=128', '--service_account=cloud-fn-storage-uploader@rental-housing-project.iam.gserviceaccount.com',
+         '--ignore-file=.gitignore',' --timeout=5']
+  dir: '/rental-housing-functions'

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta property="og:site_name" content="craigslist">
+	<meta name="twitter:card" content="preview">
+	<meta property="og:title" content="House in Burnaby $2500/mo - apts/housing for rent">
+	<meta name="description" content="4 bedroom 1 bathroom 1 den Garage parking for one vehicle Close to transit $2500/mo (utilities not...">
+	<meta property="og:description" content="4 bedroom 1 bathroom 1 den Garage parking for one vehicle Close to transit $2500/mo (utilities not...">
+	<meta property="og:image" content="https://images.craigslist.org/00W0W_3Bg94MRDOQK_600x450.jpg">
+	<meta property="og:url" content="https://vancouver.craigslist.org/bnc/apa/d/burnaby-house-in-burnaby-2500-mo/7121245909.html">
+	<meta property="og:type" content="article">
+	<meta name="robots" content="noarchive,nofollow,unavailable_after: 10-Jul-20 14:31:52 PDT">
+	<meta name="geo.position" content="49.222237;-122.938603">
+	<meta name="geo.placename" content="Burnaby">
+	<meta name="geo.region" content="CA-BC">
+	<title>House in Burnaby $2500/mo - apts/housing for rent</title>
+	<link rel="canonical" href="https://vancouver.craigslist.org/bnc/apa/d/burnaby-house-in-burnaby-2500-mo/7121245909.html">
+
+<link type="text/css" rel="stylesheet" media="all" href="//www.craigslist.org/styles/cl.css?v=114e137d9a3cd7712e148e52f45edffd"><link type="text/css" rel="stylesheet" media="all" href="//www.craigslist.org/styles/postings.css?v=6060fb8a94f0ca1485b410b185f2a417">    <link type="text/css" rel="stylesheet" media="all" href="//www.craigslist.org/styles/leaflet.css?v=d604b055c4c11b9fd29d0c071b394312">
+</head>
+
+<body class="posting">
+<script type="text/javascript"><!--
+    function C(k){return(document.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
+    var pagetype, pagemode;
+    (function(){
+        var h = document.documentElement;
+        h.className = h.className.replace('no-js', 'js');
+        var b = document.body;
+        var bodyClassList = b.className.split(/\s+/);;
+        pagetype = bodyClassList[0]; // dangerous assumption
+        var fmt = C('cl_fmt');
+        if ( fmt === 'regular' || fmt === 'mobile' ) {
+            pagemode = fmt;
+        } else if (screen.width <= 480) {
+            pagemode = 'mobile';
+        } else {
+            pagemode = 'regular';
+        }
+        pagemode = pagemode === 'mobile' ? 'mobile' : 'desktop';
+        bodyClassList.push(pagemode);
+        if (C('hidesearch') === '1' && pagemode !== 'mobile') {
+            bodyClassList.push('hide-search');
+        }
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width > 1000) { bodyClassList.push('w1024'); }
+        if (typeof window.sectionBase !== 'undefined') {
+            var mode = (decodeURIComponent(C('cl_tocmode') || '').match(new RegExp(window.sectionBase + ':([^,]+)', 'i')) || {})[1] || window.defaultView;
+            if (mode) {
+                bodyClassList.push(mode);
+            }
+        }
+        b.className = bodyClassList.join(' ');
+    }());
+--></script>
+
+    <section class="page-container">
+        <div class="bglogo"></div>
+<div class="tryapp">
+    try the craigslist app &raquo;
+    <a class="appstorebtn"
+    href="https://play.google.com/store/apps/details?id=org.craigslist.CraigslistMobile">
+        Android
+    </a>
+    <a class="appstorebtn"
+    href="https://apps.apple.com/us/app/craigslist/id1336642410">
+        iOS
+    </a>
+</div>
+<header class="global-header wide">
+   <a class="header-logo" name="logoLink" href="/">CL</a>
+
+    <nav class="breadcrumbs-container">
+
+<ul class="breadcrumbs">
+        <li class="crumb area">
+            <p>
+                    <a href="/">vancouver, BC</a>
+
+                    <span class="breadcrumb-arrow">&gt;</span>
+            </p>
+        </li>
+
+        <li class="crumb subarea">
+            <p>
+                    <a href="/bnc/">burnaby/newwest</a>
+                    <span class="breadcrumb-arrow">&gt;</span>
+            </p>
+        </li>
+
+        <li class="crumb section">
+            <p>
+                    <a href="/search/bnc/hhh">housing</a>
+
+                    <span class="breadcrumb-arrow">&gt;</span>
+            </p>
+        </li>
+
+        <li class="crumb category">
+            <p>
+                <a href="/search/bnc/apa">apts/housing for rent</a>
+
+            </p>
+        </li>
+
+</ul>
+    </nav>
+
+<div class="userlinks">
+    <ul class="user-actions">
+        <li class="user post">
+            <a href="https://post.craigslist.org/c/van">post</a>
+        </li>
+        <li class="user account">
+            <a href="https://accounts.craigslist.org/login/home">account</a>
+        </li>
+    </ul>
+    <ul class="user-favs-discards">
+        <li class="user">
+            <div class="favorites">
+                <a href="#" class="favlink"><span class="icon icon-star fav" aria-hidden="true"></span><span class="fav-number"></span><span class="fav-label"> favorites</span></a>
+            </div>
+        </li>
+        <li class="user discards">
+          <form class="unfavform js-only" method="POST" action="/favorites">
+            <div class="to-banish-page">
+              <input type="hidden" class="lastLink" name="lastLink" value="/bnc/apa/7121245909.html">
+              <input type="hidden" class="lastTitle" name="lastTitle" value="House in Burnaby $2500/mo">
+              <input type="hidden" class="unfaves" name="fl">
+              <input type="hidden" name="uf" value="1">
+              <a href="#" class="to-banish-page-link">
+                <span class="icon icon-trash red" aria-hidden="true"></span>
+                <span class="banished_count"></span>
+                <span class="discards-label"> hidden</span>
+              </a>
+            </div>
+          </form>
+        </li>
+    </ul>
+</div>
+
+</header>
+<header class="global-header narrow">
+   <a class="header-logo" href="/">CL</a>
+    <nav class="breadcrumbs-container">
+
+<ul class="breadcrumbs">
+
+
+burnaby/newwest            &gt;
+
+apts/housing for rent
+
+</ul>
+
+
+    </nav>
+    <span class="linklike show-wide-header">...</span>
+</header>
+        <section class="body">
+<header class="dateReplyBar">
+    <div class="prevnext-sec">
+        <div class="prevnext js-only">
+    <a class="prev">&#9664;  prev </a>
+    <a class="backup" title="back to search">&#9650;</a>
+    <a class="next"> next &#9654; </a>
+</div>
+
+    </div>
+
+    <div class="reply-button-row">
+    <div class="actions-combo">
+    <button role="button" class="reply-button js-only" data-href="/__SERVICE_ID__/van/apa/7121245909">
+      reply
+    </button>
+
+      <div class="reply-info js-only"></div>
+    <div class="fave-unfave action">
+        <div class="fave" role="button"  title="add to favorites">
+            <div class="icon icon-star" aria-hidden="true"></div>
+            <div class="action-label">favorite</div>
+        </div>
+        <div class="unfave" role="button" title="remove from favorites">
+            <div class="icon icon-star fav" aria-hidden="true"></div>
+            <div class="action-label">favorite</div>
+        </div>
+    </div>
+<div class="banish-unbanish action">
+  <div class="banish" role="button"  title="hide this posting">
+    <div class="icon icon-trash" aria-hidden="true"></div>
+    <div class="action-label">hide</div>
+  </div>
+  <div class="unbanish" role="button"  title="restore this posting">
+    <div class="icon icon-trash red" aria-hidden="true"></div>
+    <div class="action-label">unhide</div>
+  </div>
+</div>
+    <div class="flag-action action">
+        <div class="flag" data-flag="28" role="button" title="flag as prohibited / spam / miscategorized" >
+            <div class="flagIcon" aria-hidden="true">
+                <span class="white-flag">&#9872</span>
+                <span class="black-flag">&#9873</span>
+            </div>
+            <div class="action-label">
+                flag
+            </div>
+        </div>
+        <div class="unflag">
+            <div class="flagIcon" aria-hidden="true">&#9873</div>
+            <a class="action-label" href="https://www.craigslist.org/about/help/flags_and_community_moderation" title="thanks for flagging!">
+                flagged
+            </a>
+        </div>
+    </div>
+    </div>
+
+            <p id="display-date" class="postinginfo reveal">
+                    Posted
+                    <time class="date timeago" datetime="2020-05-09T07:54:25-0700">
+                        2020-05-09 07:54
+                    </time>
+            </p>
+
+            <p class="print-information print-contact">
+                Contact Information: <span class="print-email"></span> <span class="print-phone"></span>
+            </p>
+            <a href="#" id="printme">print</a>
+
+    </div>
+
+</header>
+
+<h2 class="postingtitle">
+    <span class="postingtitletext">
+<span class="price">$2500</span> <span class="housing">/ 4br - </span><span id="titletextonly">House in Burnaby $2500/mo</span>    </span>
+</h2>
+<section class="userbody">
+    <figure class="iw multiimage">
+    <div class="gallery">
+        <span class="slider-back arrow">&lt;</span>
+        <span class="slider-info">image 1 of 6</span>
+        <span class="slider-forward arrow">&gt;</span>
+
+        <div class="swipe">
+            <div class="swipe-wrap">
+                <div id="1_image_3Bg94MRDOQK" data-imgid="3Bg94MRDOQK" class="slide first visible">
+                    <img src="https://images.craigslist.org/00W0W_3Bg94MRDOQK_600x450.jpg" title="1" alt="1">
+                </div>
+                <div id="2_image_9lwusvjCZXQ" data-imgid="9lwusvjCZXQ" class="slide">
+                </div>
+                <div id="3_image_8leuV08Danr" data-imgid="8leuV08Danr" class="slide">
+                </div>
+                <div id="4_image_6ZCixJquyoS" data-imgid="6ZCixJquyoS" class="slide">
+                </div>
+                <div id="5_image_jjbHepD5WoD" data-imgid="jjbHepD5WoD" class="slide">
+                </div>
+                <div id="6_image_lw3neUydsD4" data-imgid="lw3neUydsD4" class="slide">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="thumbs"><a id="1_thumb_3Bg94MRDOQK" class="thumb" data-imgid="3Bg94MRDOQK" href="https://images.craigslist.org/00W0W_3Bg94MRDOQK_600x450.jpg" title="1"><img src="https://images.craigslist.org/00W0W_3Bg94MRDOQK_50x50c.jpg" class="selected" alt="1"></a><a id="2_thumb_9lwusvjCZXQ" class="thumb" data-imgid="9lwusvjCZXQ" href="https://images.craigslist.org/01616_9lwusvjCZXQ_600x450.jpg" title="2"><img src="https://images.craigslist.org/01616_9lwusvjCZXQ_50x50c.jpg" alt="2"></a><a id="3_thumb_8leuV08Danr" class="thumb" data-imgid="8leuV08Danr" href="https://images.craigslist.org/01414_8leuV08Danr_600x450.jpg" title="3"><img src="https://images.craigslist.org/01414_8leuV08Danr_50x50c.jpg" alt="3"></a><a id="4_thumb_6ZCixJquyoS" class="thumb" data-imgid="6ZCixJquyoS" href="https://images.craigslist.org/00F0F_6ZCixJquyoS_600x450.jpg" title="4"><img src="https://images.craigslist.org/00F0F_6ZCixJquyoS_50x50c.jpg" alt="4"></a><a id="5_thumb_jjbHepD5WoD" class="thumb" data-imgid="jjbHepD5WoD" href="https://images.craigslist.org/00D0D_jjbHepD5WoD_600x450.jpg" title="5"><img src="https://images.craigslist.org/00D0D_jjbHepD5WoD_50x50c.jpg" alt="5"></a><a id="6_thumb_lw3neUydsD4" class="thumb" data-imgid="lw3neUydsD4" href="https://images.craigslist.org/00202_lw3neUydsD4_600x450.jpg" title="6"><img src="https://images.craigslist.org/00202_lw3neUydsD4_50x50c.jpg" alt="6"></a></div>
+    
+        <script type="text/javascript"><!--
+var imgList = [{"shortid":"3Bg94MRDOQK","url":"https://images.craigslist.org/00W0W_3Bg94MRDOQK_600x450.jpg","thumb":"https://images.craigslist.org/00W0W_3Bg94MRDOQK_50x50c.jpg","imgid":"1:00W0W_3Bg94MRDOQK"},{"shortid":"9lwusvjCZXQ","url":"https://images.craigslist.org/01616_9lwusvjCZXQ_600x450.jpg","thumb":"https://images.craigslist.org/01616_9lwusvjCZXQ_50x50c.jpg","imgid":"1:01616_9lwusvjCZXQ"},{"shortid":"8leuV08Danr","url":"https://images.craigslist.org/01414_8leuV08Danr_600x450.jpg","thumb":"https://images.craigslist.org/01414_8leuV08Danr_50x50c.jpg","imgid":"1:01414_8leuV08Danr"},{"shortid":"6ZCixJquyoS","url":"https://images.craigslist.org/00F0F_6ZCixJquyoS_600x450.jpg","thumb":"https://images.craigslist.org/00F0F_6ZCixJquyoS_50x50c.jpg","imgid":"1:00F0F_6ZCixJquyoS"},{"shortid":"jjbHepD5WoD","url":"https://images.craigslist.org/00D0D_jjbHepD5WoD_600x450.jpg","thumb":"https://images.craigslist.org/00D0D_jjbHepD5WoD_50x50c.jpg","imgid":"1:00D0D_jjbHepD5WoD"},{"shortid":"lw3neUydsD4","url":"https://images.craigslist.org/00202_lw3neUydsD4_600x450.jpg","thumb":"https://images.craigslist.org/00202_lw3neUydsD4_50x50c.jpg","imgid":"1:00202_lw3neUydsD4"}];
+--></script>
+    
+</figure>
+
+
+    <div class="mapAndAttrs">
+<div class="mapbox">
+    <div id="map" class="viewposting" data-latitude="49.222237" data-longitude="-122.938603" data-accuracy="23"></div>
+    <div class="mapaddress">Canada way near 16th ave</div>
+    
+</div>
+
+    <p class="attrgroup">
+
+
+
+            <span class="shared-line-bubble"><b>4BR</b> / <b>1Ba</b></span>
+
+
+
+
+            <span class="housing_movein_now property_date shared-line-bubble" data-date="2020-05-10" data-today_msg="available now">available may 10</span>
+
+    </p>
+    <p class="attrgroup">
+
+
+
+            <span>house</span>
+            <br>
+
+
+
+
+            <span>laundry on site</span>
+            <br>
+
+    </p>
+    </div>
+
+    <section id="postingbody">
+        <div class="print-information print-qrcode-container">
+            <p class="print-qrcode-label">QR Code Link to This Post</p>
+            <div class="print-qrcode" data-location="https://vancouver.craigslist.org/bnc/apa/d/burnaby-house-in-burnaby-2500-mo/7121245909.html"></div>
+        </div>
+4 bedroom<br>
+1 bathroom<br>
+1 den <br>
+Garage parking for one vehicle<br>
+Close to transit <br>
+$2500/mo (utilities not included<br>
+<br>
+Call  <a href="#" class="show-contact" title="click to show contact info" data-href="/__SERVICE_ID__/van/apa/7121245909" rel="nofollow">show contact info</a>
+ if you have any questions or would like to arrange a viewing    </section>
+
+<ul class="notices">
+            <li>do NOT contact me with unsolicited services or offers</li>
+</ul>
+
+    <div class="postinginfos">
+            <p class="postinginfo">post id: 7121245909</p>
+                <p class="postinginfo reveal">posted: <time class="date timeago" datetime="2020-05-09T07:54:25-0700">2020-05-09 07:54</time></p>
+
+                <p class="postinginfo reveal">updated: <time class="date timeago" datetime="2020-05-26T14:26:52-0700">2020-05-26 14:26</time></p>
+
+               <p class="postinginfo">
+                   <a href="https://accounts.craigslist.org/eaf?postingID=7121245909&amp;token=U2FsdGVkX183ODYzNzc4Nlg8SqBW-Ggbx8oES8dQZi7Y3NjI3Zz9KCbXJvZ-h-UF" class="email-friend">email to friend</a>
+               </p>
+        <p class="postinginfo">
+              <a class="bestof-link" data-flag="9" href="https://post.craigslist.org/flag?flagCode=9&amp;postingID=7121245909" title="nominate for best-of-CL">
+                <span class="bestof-icon">&hearts; </span><span class="bestof-text">best of</span>
+              </a> <sup>[<a href="https://www.craigslist.org/about/best-of-craigslist">?</a>]</sup>
+        </p>
+        
+    </div>
+
+    <div class="print-information print-pics"></div>
+
+</section>
+
+<div class="psa-box">
+</div>
+
+
+        </section>
+<footer>
+    <ul class="clfooter">
+        <li>&copy; 2020 <span class="desktop">craigslist</span><span class="mobile">CL</span></li>
+        <li><a href="https://www.craigslist.org/about/help/">help</a></li>
+        <li><a href="https://www.craigslist.org/about/scams">safety</a></li>
+        <li class="desktop"><a href="https://www.craigslist.org/about/privacy.policy">privacy</a></li>
+        <li class="desktop"><a href="https://forums.craigslist.org/?forumID=8">feedback</a></li>
+        <li class="desktop"><a href="https://www.craigslist.org/about/craigslist_is_hiring">cl jobs</a></li>
+        <li><a href="//www.craigslist.org/about/terms.of.use.en-us">terms</a><sup class="neu">new</sup></li>
+        <li><a href="https://www.craigslist.org/about/">about</a></li>
+        <li class="fsel desktop linklike" data-mode="mobile">mobile</li>
+        <li class="fsel mobile linklike" data-mode="regular">desktop</li>
+    </ul>
+</footer>
+    </section>
+
+    
+        <script type="text/javascript"><!--
+var countOfTotalText = "image {count} of {total}";
+var imageConfig = {"4":{"hostname":"https://images.craigslist.org","sizes":["50x50c","300x300","600x450","1200x900"]},"1":{"hostname":"https://images.craigslist.org","sizes":["50x50c","300x300","600x450","1200x900"]},"3":{"hostname":"https://images.craigslist.org","sizes":["50x50c","300x300","600x450","1200x900"]},"0":{"hostname":"https://images.craigslist.org","sizes":["50x50c","300x300","600x450"]},"2":{"hostname":"https://images.craigslist.org","sizes":["50x50c","300x300","600x450","1200x900"]}};
+var maptileBaseUrl = "//map{s}.craigslist.org/t09/{z}/{x}/{y}.png";
+var pID = 7121245909;
+--></script>
+    
+
+                <script>
+                try {
+                    if (
+                        !/\/\/.+\.craigslist\.org\/about\//.test(window.location.href)
+                        &&
+                        (!window.addEventListener || JSON.parse(JSON.stringify('x')) !== 'x')
+                    ) {
+                        throw "unsupported browser";
+                    }
+                } catch (e) {
+                    function cleanup() {
+                        document.body.innerHTML = '<div id="cl-unsupported-browser" style="margin:1em;font-size:150%;text-align:center;">We have detected you are using a browser that is missing critical features.<br><br>Please visit craigslist from a modern browser.</div>';
+                        document.body.style = "display:block";
+                    }
+
+                    try {
+                        document.body.style = "display:none";
+                    } catch (e) {
+                    }
+                    window.onload = cleanup;
+                    window.clUnsupportedBrowser = true;
+                }
+                </script>
+            <script src="//www.craigslist.org/js/general-concat.min.js?v=bfb06478daf14102dee62d185b10e9bb" type="text/javascript" ></script>
+
+    <script src="//www.craigslist.org/js/leaflet-concat.min.js?v=4e1898d207f2734e9047790b41ed1307" type="text/javascript" ></script>
+
+<script src="//www.craigslist.org/js/postings-concat.min.js?v=ff8523584ac153e83a5e2bb17cdedd21" type="text/javascript" ></script>
+</body>
+</html>
