@@ -1,6 +1,4 @@
 """Cloud Function that accepts a POST request"""
-
-
 from google.cloud import storage
 from google.cloud import error_reporting
 import requests
@@ -11,7 +9,7 @@ import os
 err_client = error_reporting.Client()
 storage_client = storage.Client()
 
-# request headers template
+# Request headers template
 HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
     'Accept-Encoding': 'gzip, deflate, br',

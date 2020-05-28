@@ -1,2 +1,5 @@
 .idea/
 __pycache__/
+
+# Service Account
+cloud-fn-storage-uploader.json
