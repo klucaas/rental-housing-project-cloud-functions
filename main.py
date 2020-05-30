@@ -1,7 +1,5 @@
-"""Cloud Function that accepts a POST request"""
-from google.cloud import storage, exceptions, error_reporting
-# from google.cloud import exceptions
-# from google.cloud import error_reporting
+"""Cloud Function that accepts a POST request """
+from google.cloud import storage, error_reporting
 from user_agents import USER_AGENTS
 from templates import HEADERS
 import requests
@@ -62,13 +60,10 @@ def get_html(url: str) -> str:
         res.raise_for_status()  # Raise an exception for error codes (4xx or 5xx)
         html_str = res.text
     except requests.exceptions.RequestException as err:
-
         status_code = res.status_code if res else None
-
         request_context = error_reporting.HTTPContext(
             method='GET', url=url, user_agent=headers['User-Agent'],
             referrer=headers['Referer'], response_status_code=status_code)
-
         err_client.report(message=str(err), http_context=request_context)
 
     return html_str
@@ -124,10 +119,9 @@ def handler(request) -> tuple:
         return request_json, 200
 
     request_json.update({'html': html_text})
-
     uploaded = upload_to_google_cloud_storage(request_json)
 
-    # successfully uploaded to GCS
+    # unsuccessful upload to Google Cloud Storage
     if not uploaded:
         request_json.update(
             {'message': 'Upload to Google Cloud Storage failed. See error reporting console for details.'})
