@@ -1,6 +1,9 @@
 """Cloud Function that accepts a POST request"""
-from google.cloud import storage
-from google.cloud import error_reporting
+from google.cloud import storage, exceptions, error_reporting
+# from google.cloud import exceptions
+# from google.cloud import error_reporting
+from user_agents import USER_AGENTS
+from templates import HEADERS
 import requests
 import random
 import json
@@ -8,52 +11,6 @@ import os
 
 err_client = error_reporting.Client()
 storage_client = storage.Client()
-
-# Request headers template
-HEADERS = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-    'Accept-Encoding': 'gzip, deflate, br',
-    'Accept-Language': 'en-US,en;q=0.9,nl;q=0.8',
-    'Cache-Control': 'max-age=0',
-    'Connection': 'keep-alive',
-    'Host': '',
-    'Referer': '',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'same-origin',
-    'Sec-Fetch-User': '?1',
-    'Upgrade-Insecure-Requests': '1',
-    'User-Agent': ''
-}
-
-# 25 randomly generated user agents
-USER_AGENTS = [
-    'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.16 Safari/537.36',
-    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/4E423F',
-    'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.3319.102 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
-    'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/5.0)',
-    'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2309.372 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (X11; Linux i686; rv:64.0) Gecko/20100101 Firefox/64.0',
-    'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1500.55 Safari/537.36',
-    'Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.2; Trident/4.0; Media Center PC 4.0; SLCC1; .NET CLR 3.0.04320)',
-    'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/44.0.2403.155 Safari/537.36',
-    'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/75.0',
-    'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1'
-]
 
 
 def get_headers(url) -> dict:
@@ -97,27 +54,22 @@ def get_html(url: str) -> str:
     """
     html_str = ''
     res = None
-    err = None
 
     headers = get_headers(url)
 
     try:
-        res = requests.get(url=url, headers=headers)
-        res.raise_for_status()
+        res = requests.get(url=url, headers=headers, timeout=1, allow_redirects=False)
+        res.raise_for_status()  # Raise an exception for error codes (4xx or 5xx)
         html_str = res.text
-    except requests.exceptions.ConnectionError as connection_err:
-        err = connection_err
-    except requests.exceptions.HTTPError as http_err:
-        err = http_err
-    except requests.exceptions.RequestException as broad_err:
-        err = broad_err
-    finally:
-        if err:
-            status_code = res.status_code if res else None
-            request_context = error_reporting.HTTPContext(
-                method='GET', url=url, user_agent=headers['User-Agent'],
-                referrer=headers['Referer'], response_status_code=status_code)
-            err_client.report(message=str(err), http_context=request_context)
+    except requests.exceptions.RequestException as err:
+
+        status_code = res.status_code if res else None
+
+        request_context = error_reporting.HTTPContext(
+            method='GET', url=url, user_agent=headers['User-Agent'],
+            referrer=headers['Referer'], response_status_code=status_code)
+
+        err_client.report(message=str(err), http_context=request_context)
 
     return html_str
 
@@ -130,13 +82,13 @@ def upload_to_google_cloud_storage(request_json) -> bool:
     :param request_json:
 
     :rtype: bool
-    :return: True on successful upload, False otherwise
+    :return: True on successful upload, otherwise False
     """
     upload_success = False
     try:
         bucket = storage_client.get_bucket(os.environ['GCS_BUCKET'])
-        blob = bucket.blob(request_json['data_id'] + '.txt')
-        blob.upload_from_string(json.dump(request_json))
+        blob = bucket.blob(str(request_json['data_id']) + '.txt')
+        blob.upload_from_string(json.dumps(request_json))
         upload_success = True
     except Exception as e:
         err_client.report(message=str(e))
@@ -165,12 +117,20 @@ def handler(request) -> tuple:
         return {'message': 'Missing required `href` in request.'}, 400
 
     html_text = get_html(request_json['href'])
-    request_json.update({'html_text': html_text})
+
+    # GET request failed
+    if html_text == '':
+        request_json.update({'message': 'GET request failed. See error reporting console for details.'})
+        return request_json, 200
+
+    request_json.update({'html': html_text})
 
     uploaded = upload_to_google_cloud_storage(request_json)
 
     # successfully uploaded to GCS
     if not uploaded:
+        request_json.update(
+            {'message': 'Upload to Google Cloud Storage failed. See error reporting console for details.'})
         return request_json, 200
 
     return request_json, 201
