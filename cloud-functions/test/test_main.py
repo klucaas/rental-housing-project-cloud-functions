@@ -3,7 +3,6 @@ from templates import HEADERS
 from google.cloud import storage, exceptions
 import main
 import requests
-import time
 import os
 
 

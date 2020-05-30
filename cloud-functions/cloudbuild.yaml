@@ -3,10 +3,10 @@ steps:
   id: RUN_TESTS
   entrypoint: /bin/sh
   args: [-c, 'pip install -r requirements.txt', '&&', 'python', '-m', 'unittest', 'discover']
-  dir: '/rental-housing-functions'
+  dir: '/cloud-functions'
 - name: 'gcr.io/cloud-builders/gcloud'
   id: DEPLOY
   args: ['functions', 'deploy', 'clscraper', '--trigger-http', '--runtime=python37', '--entry-point=handler',
          '--memory=128', '--service-account=cloud-fn-storage-uploader@rental-housing-project.iam.gserviceaccount.com',
          '--ignore-file=.gitignore',' --timeout=5']
-  dir: '/rental-housing-functions'
+  dir: '/cloud-functions'
