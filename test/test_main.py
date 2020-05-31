@@ -3,6 +3,7 @@ from templates import HEADERS
 from google.cloud import storage, exceptions
 import main
 import requests
+import json
 import os
 
 
@@ -122,7 +123,7 @@ class TestCloudFunction(TestCase):
 
         mock_upload_to_google_cloud_storage.return_value = True
 
-        self.assertEqual(main.handler(mock_request), (self.json_data_to_upload, 201))
+        self.assertEqual(main.handler(mock_request), (json.dumps(self.json_data_to_upload), 201))
 
     @mock.patch('flask.Request')
     def test_handler_returns_405_on_other_request_types(self, mock_request):
@@ -134,7 +135,7 @@ class TestCloudFunction(TestCase):
         mock_request.get_json.silent = True
         mock_request.method = 'GET'
 
-        self.assertEqual(main.handler(mock_request), ({'message': 'Only POST requests permitted.'}, 405))
+        self.assertEqual(main.handler(mock_request), (json.dumps({'message': 'Only POST requests permitted.'}), 405))
 
     @mock.patch('flask.Request')
     def test_handler_returns_400_on_missing_data_href(self, mock_request):
@@ -149,14 +150,13 @@ class TestCloudFunction(TestCase):
         mock_request.get_json.silent = True
         mock_request.method = 'POST'
 
-        self.assertEqual(main.handler(mock_request), ({'message': 'Missing required `href` in request.'}, 400))
+        self.assertEqual(main.handler(mock_request), (json.dumps({'message': 'Missing required `href` in request.'}), 400))
 
     @mock.patch('main.get_html')
     @mock.patch('flask.Request')
     def test_handler_returns_200_on_failed_get_request(self, mock_request, mock_get_html):
         """
         Test handler returns (data, 200) when GET request fails.
-
         """
 
         mock_request.get_json.return_value = self.incoming_json_data
@@ -168,7 +168,7 @@ class TestCloudFunction(TestCase):
         expected = self.incoming_json_data.copy()
         expected.update({'message': 'GET request failed. See error reporting console for details.'})
 
-        self.assertEqual(main.handler(mock_request), (expected, 200))
+        self.assertEqual(main.handler(mock_request), (json.dumps(expected), 200))
 
     @mock.patch('main.upload_to_google_cloud_storage')
     @mock.patch('main.get_html')
@@ -176,7 +176,6 @@ class TestCloudFunction(TestCase):
     def test_handler_returns_200_on_failed_upload_to_gcs(self, mock_request, mock_get_html, mock_upload_to_gcs):
         """
         Test handler returns (data, 200) when upload to Google Cloud Storage fails.
-
         """
 
         mock_request.get_json.return_value = self.incoming_json_data
@@ -190,4 +189,4 @@ class TestCloudFunction(TestCase):
         expected = self.json_data_to_upload.copy()
         expected.update({'message': 'Upload to Google Cloud Storage failed. See error reporting console for details.'})
 
-        self.assertEqual(main.handler(mock_request), (expected, 200))
+        self.assertEqual(main.handler(mock_request), (json.dumps(expected), 200))

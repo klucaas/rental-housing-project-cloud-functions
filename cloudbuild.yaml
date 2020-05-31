@@ -1,16 +1,11 @@
 steps:
 - name: 'docker.io/library/python:3.7'
-  id: INSTALL_DEPENDENCIES
+  id: INSTALL_THEN_RUN_TESTS
   entrypoint: /bin/sh
-  args: [-c, 'pip install -r requirements.txt']
-- name: 'docker.io/library/python:3.7'
-  id: RUN_TESTS
-  entrypoint: /bin/sh
-  args: ['python', '-m', 'unittest', 'discover']
-  waitFor: INSTALL
+  args: [-c, 'pip install -r requirements.txt', '&&', 'python -m unittest discover']
 - name: 'gcr.io/cloud-builders/gcloud'
   id: DEPLOY
   args: ['functions', 'deploy', 'clscraper', '--trigger-http', '--runtime=python37', '--entry-point=handler',
          '--memory=128', '--service-account=cloud-fn-storage-uploader@rental-housing-project.iam.gserviceaccount.com',
-         '--ignore-file=.gitignore','--timeout=5']
-  waitFor: RUN_TESTS
+         '--timeout=5', '--allow-unauthenticated']
+  waitFor: ['INSTALL_AND_RUN_TESTS']
