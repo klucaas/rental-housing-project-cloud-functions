@@ -8,4 +8,4 @@ steps:
   args: ['functions', 'deploy', 'clscraper', '--trigger-http', '--runtime=python37', '--entry-point=handler',
          '--memory=128', '--service-account=cloud-fn-storage-uploader@rental-housing-project.iam.gserviceaccount.com',
          '--timeout=5', '--allow-unauthenticated']
-  waitFor: ['INSTALL_AND_RUN_TESTS']
+  waitFor: ['INSTALL_THEN_RUN_TESTS']
