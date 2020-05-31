@@ -105,18 +105,18 @@ def handler(request) -> tuple:
 
     # Method not allowed
     if request.method != 'POST':
-        return {'message': 'Only POST requests permitted.'}, 405
+        return json.dumps({'message': 'Only POST requests permitted.'}), 405
 
     # Missing required data
     if not request_json or 'href' not in request_json:
-        return {'message': 'Missing required `href` in request.'}, 400
+        return json.dumps({'message': 'Missing required `href` in request.'}), 400
 
     html_text = get_html(request_json['href'])
 
     # GET request failed
     if html_text == '':
         request_json.update({'message': 'GET request failed. See error reporting console for details.'})
-        return request_json, 200
+        return json.dumps(request_json), 200
 
     request_json.update({'html': html_text})
     uploaded = upload_to_google_cloud_storage(request_json)
@@ -125,7 +125,7 @@ def handler(request) -> tuple:
     if not uploaded:
         request_json.update(
             {'message': 'Upload to Google Cloud Storage failed. See error reporting console for details.'})
-        return request_json, 200
+        return json.dumps(request_json), 200
 
-    return request_json, 201
+    return json.dumps(request_json), 201
 
